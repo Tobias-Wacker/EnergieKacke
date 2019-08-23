@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navDevices"
+            android:icon="@drawable/ic_devices"
+            android:title="All Devices"></item>
+
+        <item
+            android:id="@+id/navAdd"
+            android:icon="@drawable/ic_plus_one"
+            android:title="Add new Device"></item>
+
+        <item
+            android:id="@+id/navCharts"
+            android:icon="@drawable/ic_chart"
+            android:title="Graphics"></item>
+    </group>
+
+    <item android:title="Further Information">
+        <menu>
+            <item
+                android:id="@+id/navSettings"
+                android:icon="@drawable/ic_settings"
+                android:title="Settings"></item>
+
+            <item
+                android:id="@+id/navInfo"
+                android:icon="@drawable/ic_info"
+                android:title="Information"></item>
+        </menu>
+    </item>
+
+</menu>

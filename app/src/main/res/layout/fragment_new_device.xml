@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Device Fragment"
+        android:textSize="16sp"
+        android:padding="16dp"
+        />
+
+    <EditText
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EditTextName"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:padding="16dp"
+        android:id="@+id/watt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Watt"
+        android:inputType="number"
+        />
+
+
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:descendantFocusability="blocksDescendants"
+        />
+
+    <Button
+        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
