@@ -1,56 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".NewDeviceFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Device Fragment"
-        android:textSize="16sp"
-        android:padding="16dp"
-        />
 
-    <EditText
-        android:id="@+id/device_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="EditTextName"
-        android:inputType="textCapWords"
-        />
-
-    <EditText
-        android:padding="16dp"
-        android:id="@+id/device_watt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Watt"
-        android:inputType="number"
-        />
+        android:background="@color/white"
+        android:orientation="vertical">
 
 
-    <TimePicker
-        android:id="@+id/timepicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:timePickerMode="spinner"
-        android:descendantFocusability="blocksDescendants"
-        />
 
-    <Button
-        android:padding="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="save"
-        android:layout_gravity="center"
-        android:onClick="addConsumer"
-        />
 
-    <TextView
-        android:id="@+id/anzeiger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hi"/>
+        <EditText
+            android:id="@+id/device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/editText_consumer_hintname"
+            android:inputType="textCapWords" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_consumer_gas"
+                style="@style/Margin_16"
+                android:layout_marginRight="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/round_button_blue"
+                android:gravity="center"
+                android:text="@string/button_consumer_gas" />
+
+            <Button
+                android:id="@+id/button_consumer_strom"
+                style="@style/Margin_16"
+                android:layout_marginLeft="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/round_button_yellow"
+                android:gravity="center"
+                android:text="@string/button_consumer_strom" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/consumer_text_consumption"
+                style="@style/Margin_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/text_consumer_consumption"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/device_watt"
+                style="@style/Margin_16"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/consumer_text_consumption"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="100 Watt"
+                android:inputType="number" />
+
+
+
+            <TextView
+                style="@style/Margin_16"
+                android:layout_marginStart="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/device_watt"
+                android:text="W"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorSecondaryDark" />
+
+        <TextView
+            android:id="@+id/text_consumer_duration"
+            style="@style/Margin_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_consumer_time"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+
+            <EditText
+                android:id="@+id/edit_consumer_duration"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/Margin_16"
+                android:inputType="number"
+                android:hint="12"
+                />
+            <Button
+                android:id="@+id/button_consumer_min"
+                style="@style/Margin_16"
+                android:layout_marginEnd="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_toEndOf="@id/edit_consumer_duration"
+                android:text="@string/button_consumer_minute" />
+            <Button
+                android:id="@+id/button_consumer_sek"
+                style="@style/Margin_16"
+                android:layout_marginStart="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_toEndOf="@id/button_consumer_min"
+                android:text="@string/button_consumer_stunde" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorSecondaryDark" />
+
+
+        <Button
+            android:id="@+id/button_consumer_save"
+            style="@style/Margin_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/button_consumer_create" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+

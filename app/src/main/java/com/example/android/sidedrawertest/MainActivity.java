@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drwaer_open, R.string.navigation_drwaer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
         //Rotating Burger Symbol
 
@@ -101,9 +101,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Consumer test = new Consumer(name, watt, 2, 1);
 
-        TextView anzeige = (TextView)findViewById(R.id.anzeiger);
-
-        anzeige.setText(test.getConsumerName() + test.getConsumerWatt());
     }
 
 
