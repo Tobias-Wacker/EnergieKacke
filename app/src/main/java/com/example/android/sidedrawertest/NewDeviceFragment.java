@@ -17,4 +17,6 @@ public class NewDeviceFragment extends Fragment {
     }
 
 
+
+
 }

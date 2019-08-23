@@ -22,7 +22,7 @@
 
     <EditText
         android:padding="16dp"
-        android:id="@+id/watt"
+        android:id="@+id/device_watt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Watt"
@@ -44,6 +44,13 @@
         android:layout_height="wrap_content"
         android:text="save"
         android:layout_gravity="center"
+        android:onClick="addConsumer"
         />
+
+    <TextView
+        android:id="@+id/anzeiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hi"/>
 
 </LinearLayout>

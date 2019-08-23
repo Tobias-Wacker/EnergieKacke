@@ -88,8 +88,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    public void addConsumer(View view) {
+        EditText ConsumerName = (EditText)findViewById(R.id.device_name);
+        String name = ConsumerName.getText().toString();
 
-        //Intent phrasesIntent = new Intent(MainActivity.this, DevicesFragment.class);
+        EditText ConsumerWatt = (EditText)findViewById(R.id.device_watt);
+        String watt1 = ConsumerWatt.getText().toString();
+        int watt = Integer.parseInt(watt1);
+
+
+
+
+        Consumer test = new Consumer(name, watt, 2, 1);
+
+        TextView anzeige = (TextView)findViewById(R.id.anzeiger);
+
+        anzeige.setText(test.getConsumerName() + test.getConsumerWatt());
+    }
+
+
+    //Intent phrasesIntent = new Intent(MainActivity.this, DevicesFragment.class);
 
         // Start the new activity
         //startActivity(phrasesIntent);
