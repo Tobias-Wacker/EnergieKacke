@@ -1,6 +1,26 @@
 <resources>
-    <string name="app_name">SidedrawerTest</string>
+    <string name="app_name">Manager</string>
+    <string name="title">Energie Manager</string>
+    <string name="add_Button">mehr</string>
+    <string name="text_neuer_verbraucher">Neuen Verbraucher hinzufügen</string>
+    <string name="home_meineVerbaucher">Meine Verbraucher:</string>
+    <string name="text_consumer_name">Name des Verbraucher</string>
+    <string name="text_consumer_consumption">Verbrauch des Geräts</string>
+    <string name="text_consumer_time">Nutzungsdauer pro Tag</string>
+    <string name="text_consumer_interval">Zeitraum der Nutzung</string>
+    <string name="text_consumer_price">Energiepreis</string>
+    <string name="text_consumer_totalconsumption">Gesamtverbrauch</string>
+    <string name="text_consumer_cost">Gesamtkosten</string>
+    <string name="button_consumer_create">Verbraucher erstellen</string>
+    <string name="editText_consumer_hintname">Verbaucher</string>
+    <string name="editText_kwh_hintname">kwh</string>
 
-    <string name="navigation_drwaer_open">Open navigation drawer</string>
-    <string name="navigation_drwaer_close">Close navigation drawer</string>
+    <string name="title_activity_sidedrawer">Sidedrawer</string>
+    <string name="navigation_drawer_open">Navigation öffnen</string>
+    <string name="navigation_drawer_close">Navigation schließen</string>
+    <string name="nav_header_title">Navigation</string>
+    <string name="nav_header_subtitle">Ihr Energie Manager</string>
+    <string name="nav_header_desc">Navigations Überschrift</string>
+    <string name="action_settings">Einstellungen</string>
+
 </resources>

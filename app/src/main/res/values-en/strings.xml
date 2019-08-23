@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title">energy manager</string>
+    <string name="add_Button">add</string>
+    <string name="text_neuer_verbraucher">add new consumer</string>
+    <string name="home_meineVerbaucher">My consumers:</string>
+    <string name="text_consumer_name">name of device</string>
+    <string name="text_consumer_consumption">consumption of the device</string>
+    <string name="text_consumer_time">usage time per day</string>
+    <string name="text_consumer_interval">time interval of usage</string>
+    <string name="text_consumer_price">price per kwh</string>
+    <string name="text_consumer_totalconsumption">total consumption</string>
+    <string name="text_consumer_cost">total cost</string>
+    <string name="button_consumer_create">create Consumer</string>
+    <string name="editText_consumer_hintname">Consumer</string>
+    <string name="editText_kwh_hintname">kwh</string>
+
+    <string name="title_activity_sidedrawer">Sidedrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Navigation drawer</string>
+    <string name="nav_header_subtitle">Your energy manager</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>
