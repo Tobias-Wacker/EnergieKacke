@@ -1,6 +1,8 @@
 package com.example.android.sidedrawertest;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +18,16 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.android.sidedrawertest.data.DevicesContract;
+import com.example.android.sidedrawertest.data.DevicesContract.DeviceEntry;
+import com.example.android.sidedrawertest.data.DevicesDbHelper;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    private DevicesDbHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drwaer_open, R.string.navigation_drwaer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
         //Rotating Burger Symbol
 
@@ -46,7 +55,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             navigationView.setCheckedItem(R.id.navDevices);
         }
+
+
+        mDbHelper = new DevicesDbHelper(this);
     }
+
+    //Consumer[] allDevices = new Consumer[1000];
+    //int m = 0;
+    //ArrayList<Consumer> allDevicesList = new ArrayList<Consumer>();
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -89,27 +107,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void addConsumer(View view) {
-        EditText ConsumerName = (EditText)findViewById(R.id.device_name);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DevicesFragment()).commit();
+
+
+    }
+        /*EditText ConsumerName = (EditText)findViewById(R.id.device_name);
         String name = ConsumerName.getText().toString();
 
         EditText ConsumerWatt = (EditText)findViewById(R.id.device_watt);
         String watt1 = ConsumerWatt.getText().toString();
         int watt = Integer.parseInt(watt1);
 
-
-
-
         Consumer test = new Consumer(name, watt, 2, 1);
+
 
         TextView anzeige = (TextView)findViewById(R.id.anzeiger);
 
+
+
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+        //ContentValues dbValues = new ContentValues();
+        //dbValues.put(DeviceEntry.COLLUMN_DEVICE_NAME, name);
+        //dbValues.put(DeviceEntry.COLLUMN_DEVICE_CONSUMPTION, watt);
+        //dbValues.put(DeviceEntry.COLLUMN_DEVICE_TYPE, 1);
+
+       // long newRowID = db.insert(DeviceEntry.TABLE_NAME, null, dbValues);
+
         anzeige.setText(test.getConsumerName() + test.getConsumerWatt());
-    }
 
 
-    //Intent phrasesIntent = new Intent(MainActivity.this, DevicesFragment.class);
 
-        // Start the new activity
-        //startActivity(phrasesIntent);
+
+
+
+
+    }*/
+
 }
 
