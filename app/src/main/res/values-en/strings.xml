@@ -6,13 +6,17 @@
     <string name="text_neuer_verbraucher">add new consumer</string>
     <string name="home_meineVerbaucher">My consumers:</string>
     <string name="text_consumer_name">name of device</string>
-    <string name="text_consumer_consumption">consumption of the device</string>
-    <string name="text_consumer_time">usage time per day</string>
+    <string name="text_consumer_consumption">consumption</string>
+    <string name="text_consumer_time">usage per day</string>
     <string name="text_consumer_interval">time interval of usage</string>
     <string name="text_consumer_price">price per kwh</string>
     <string name="text_consumer_totalconsumption">total consumption</string>
     <string name="text_consumer_cost">total cost</string>
     <string name="button_consumer_create">create Consumer</string>
+    <string name="button_consumer_gas">gas</string>
+    <string name="button_consumer_strom">electricity</string>
+    <string name="button_consumer_minute">Min.</string>
+    <string name="button_consumer_stunde">Std.</string>
     <string name="editText_consumer_hintname">Consumer</string>
     <string name="editText_kwh_hintname">kwh</string>
 

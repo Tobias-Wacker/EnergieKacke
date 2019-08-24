@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView anzeige = (TextView)findViewById(R.id.anzeiger);
 
 
+<<<<<<< HEAD
 
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
@@ -135,6 +136,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
        // long newRowID = db.insert(DeviceEntry.TABLE_NAME, null, dbValues);
 
         anzeige.setText(test.getConsumerName() + test.getConsumerWatt());
+=======
+    }
+>>>>>>> a7abbbb9671afe0cea987b63d0edbef25cd5e46d
 
 
 
